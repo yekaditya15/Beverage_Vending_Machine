@@ -1,0 +1,41 @@
+.beverage-logs {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: "Arial", sans-serif;
+}
+
+.beverage-logs h2 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.beverage-logs ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.log-item {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log-type {
+  font-weight: bold;
+  color: #555;
+}
+
+.log-date {
+  color: #888;
+  font-size: 0.9em;
+}
