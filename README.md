@@ -1,3 +1,6 @@
+## Live Demo
+
+You can view the live demo [here](https://beverage-vending-machine-client.vercel.app/).
 
 # Beverage Vending Machine - Backend
 
