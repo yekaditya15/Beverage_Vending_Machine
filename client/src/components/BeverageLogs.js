@@ -12,7 +12,9 @@ const BeverageLogs = () => {
 
   const fetchLogs = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/logs");
+      const response = await axios.get(
+        "https://beverage-vending-machine.vercel.app/api/logs"
+      );
       setLogs(response.data);
     } catch (error) {
       console.error("Error fetching logs:", error);

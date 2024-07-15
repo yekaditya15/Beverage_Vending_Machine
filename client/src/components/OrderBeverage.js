@@ -16,7 +16,9 @@ const OrderBeverage = () => {
 
   const fetchBeverages = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/beverages");
+      const response = await axios.get(
+        "https://beverage-vending-machine.vercel.app/api/beverages"
+      );
       setBeverages(response.data);
     } catch (error) {
       console.error("Error fetching beverages:", error);
@@ -34,9 +36,12 @@ const OrderBeverage = () => {
     }
 
     try {
-      await axios.post("http://localhost:8000/api/beverage", {
-        type: selectedBeverage,
-      });
+      await axios.post(
+        "https://beverage-vending-machine.vercel.app/api/beverage",
+        {
+          type: selectedBeverage,
+        }
+      );
       toast.success(`Order placed for ${selectedBeverage}`);
       setSelectedBeverage("");
     } catch (error) {

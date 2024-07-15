@@ -11,7 +11,9 @@ const BeverageList = () => {
 
   const fetchBeverages = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/beverages");
+      const response = await axios.get(
+        "https://beverage-vending-machine.vercel.app/api/beverages"
+      );
       setBeverages(response.data);
     } catch (error) {
       console.error("Error fetching beverages:", error);

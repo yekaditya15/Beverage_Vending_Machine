@@ -20,7 +20,9 @@ const InventoryManagement = () => {
 
   const fetchInventory = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/inventory");
+      const response = await axios.get(
+        "https://beverage-vending-machine.vercel.app/api/inventory"
+      );
       setInventory(response.data);
     } catch (error) {
       console.error("Error fetching inventory:", error);
@@ -38,7 +40,10 @@ const InventoryManagement = () => {
 
   const updateInventory = async () => {
     try {
-      await axios.post("http://localhost:8000/api/inventory", inventory);
+      await axios.post(
+        "https://beverage-vending-machine.vercel.app/api/inventory",
+        inventory
+      );
       toast.success("Inventory updated successfully");
       fetchInventory(); // Refresh inventory data
       setEditMode(false);
@@ -50,7 +55,9 @@ const InventoryManagement = () => {
 
   const resetInventory = async () => {
     try {
-      await axios.post("http://localhost:8000/api/inventory/reset");
+      await axios.post(
+        "https://beverage-vending-machine.vercel.app/api/inventory/reset"
+      );
       toast.success("Inventory reset to 0 successfully");
       fetchInventory(); // Refresh inventory data
     } catch (error) {
